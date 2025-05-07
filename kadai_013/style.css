@@ -121,5 +121,19 @@ body {
     #nav-sp a.menu:hover {
       text-decoration: underline;
     }
+
+     #nav-sp a {
+  display: block;
+  color: #ffffff;
+  text-decoration: underline !important; /* ←確実に有効に */
+}
+
+#nav-sp a:link,
+#nav-sp a:visited,
+#nav-sp a:hover,
+#nav-sp a:active {
+  text-decoration: underline !important; /* すべての状態で強制 */
+}
+ 
   }
   
