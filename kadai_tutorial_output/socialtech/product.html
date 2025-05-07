@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>SocialTech - サービス紹介</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container"> 
+    <a href="index.html">
+      <img src="images/images/logo.png" alt="SocialTech ロゴ" class="logo" />
+    </a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <nav id="navMenu">
+      <ul class="nav-links">
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="mission.html" >ミッション</a></li>
+        <li><a href="product.html"class="active">サービス</a></li>
+        
+    </nav>
+  </header>
+
+  <main>
+    <h2>提供サービス</h2>
+    <img src="images/images/product/product-main.png" alt="サービス紹介" class="full-width-image" />
+    <div class="service-section">
+      <div class="service-box">
+        <p>マンツーマンサポート</p>
+        <img src="images/images/product/product-career.png" alt="画像１">
+      </div>
+          <div class="service-box">
+        <p>メディア発信</p>
+        <img src="images/images/product/product-media.png" alt="画像２">
+    </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SocialTech</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menuToggle");
+      const nav = document.getElementById("navMenu").querySelector("ul");
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("show");
+      });
+    });
+  </script>
+</body>
+</html>

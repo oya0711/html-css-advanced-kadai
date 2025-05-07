@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>SocialTech - トップ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html">
+        <img src="images/images/logo.png" alt="SocialTech ロゴ" class="logo" />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">トップ</a></li>
+          <li><a href="mission.html">ミッション</a></li>
+          <li><a href="product.html">サービス</a></li>
+          
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero slider">
+      <div class="slide fade active"><img src="images/images/index/index-main.png" alt="メインビジュアル" /></div>
+      <div class="slide fade"><img src="images/images/index/index-mission.png" alt="マンツーマン" /></div>
+      <div class="slide fade"><img src="images/images/index/index-aboutus1.png" alt="About Us" /></div>
+    </section>
+
+    <section class="news">
+      <div class="container">
+        <h2>ニュース</h2>
+        <ul>
+          <li><a href="#">2025年5月1日 - 新サービス「SocialTech Connect」をリリースしました。</a></li>
+          <li><a href="#">2025年4月20日 - サステナビリティへの取り組みを公開しました。</a></li>
+          <li><a href="#">2025年4月1日 - 新オフィスへの移転が完了しました。</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 SocialTech</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menuToggle");
+      const navLinks = document.querySelector(".nav-links");
+      toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+
+      const slides = document.querySelectorAll(".slide");
+      let current = 0;
+      setInterval(() => {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
+

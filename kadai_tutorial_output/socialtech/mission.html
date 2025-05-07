@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>SocialTech - ミッション</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container"> 
+    <a href="index.html">
+      <img src="images/images/logo.png" alt="SocialTech ロゴ" class="logo" />
+    </a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <nav id="navMenu">
+      <ul class="nav-links">
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="mission.html" class="active">ミッション</a></li>
+        <li><a href="product.html">サービス</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+  </header>
+
+  <main>
+    <h1>私たちのミッション</h1>
+    <img src="images/images/mission/mission-main.png" alt="ミッションビジュアル"  class="full-width-image"/>
+    <section>
+      <h2>5つの目標</h2>
+      <div class="goals">
+        <img src="images/images/mission/mission-5goals01.png" />
+        <img src="images/images/mission/mission-5goals02.png" />
+        <img src="images/images/mission/mission-5goals03.png" />
+        <img src="images/images/mission/mission-5goals04.png" />
+        <img src="images/images/mission/mission-5goals05.png" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SocialTech</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menuToggle");
+      const nav = document.getElementById("navMenu").querySelector("ul");
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("show");
+      });
+    });
+  </script>
+</body>
+</html>
